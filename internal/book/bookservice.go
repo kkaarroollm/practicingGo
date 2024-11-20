@@ -50,9 +50,6 @@ func (b *Books) Sort(field BookField, hard bool) (Books, error) {
 
 	sort.Slice(sorted, sortFunc)
 
-	if hard {
-		*b = sorted
-	}
 	return sorted, nil
 }
 
